@@ -44,4 +44,4 @@ def kmp(pattern: str, text: str):
         print(-1)
 
 
-kmp(input("pattern: "), input("cycle: "))
+kmp(input("pattern: "), input("text: "))
