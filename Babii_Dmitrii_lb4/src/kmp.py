@@ -1,4 +1,4 @@
-from Babii_Dmitrii_lb4.src.lps import build_lps
+from lps import build_lps
 
 
 def kmp(pattern: str, text: str):
