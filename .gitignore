@@ -1,3 +1,4 @@
 gem.py
 __pycache__
 .~lock*
+venv

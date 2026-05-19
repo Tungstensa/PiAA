@@ -39,7 +39,6 @@ def build_mst(n, matrix):
 
         print(f"Посещенные вершины: {visited}")
 
-        # Обновление границ
         for to in range(n):
             if not visited[to] and matrix[v][to] < min_bound[to]:
 
