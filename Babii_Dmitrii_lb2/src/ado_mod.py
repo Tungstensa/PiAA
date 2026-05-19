@@ -27,7 +27,6 @@ def build_mst(n, matrix):
         v = -1
         best = INF
 
-        # Поиск вершины с минимальной границей
         for i in range(n):
             if not visited[i] and min_bound[i] < best:
                 best = min_bound[i]
@@ -58,7 +57,6 @@ def build_mst(n, matrix):
         print(f"min_bound: {min_bound}")
         print(f"parent:    {parent}")
 
-    # Построение дерева
     tree = [[] for _ in range(n)]
 
     print("\n========== ПОСТРОЕНИЕ ДЕРЕВА ==========")
