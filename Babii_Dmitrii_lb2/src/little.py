@@ -18,7 +18,6 @@ def reduce_matrix(matrix):
     n = len(matrix)
     reduction_cost = 0
 
-    # Редукция строк
     for i in range(n):
         row_min = min(matrix[i])
 
@@ -29,7 +28,6 @@ def reduce_matrix(matrix):
                 if matrix[i][j] != INF:
                     matrix[i][j] -= row_min
 
-    # Редукция столбцов
     for j in range(n):
         col_min = min(matrix[i][j] for i in range(n))
 
