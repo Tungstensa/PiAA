@@ -148,29 +148,6 @@ def little(matrix):
 
         i, j = find_best_zero(matrix_now)
 
-        if i == -1:
-            used_from = {a for a, b in edges}
-            used_to = {b for a, b in edges}
-
-            remaining_from = [v for v in range(n) if v not in used_from]
-
-            remaining_to = [v for v in range(n) if v not in used_to]
-
-            if len(remaining_from) == 1 and len(remaining_to) == 1:
-                a = remaining_from[0]
-                b = remaining_to[0]
-
-                if not creates_cycle(edges, a, b, n) or len(edges) == n - 1:
-                    final_edges = edges + [(a, b)]
-
-                    final_cost = real_cost + original[a][b]
-
-                    if final_cost < best_cost:
-                        best_cost = final_cost
-                        best_edges = final_edges
-
-            continue
-
         if not creates_cycle(edges, i, j, n):
             include_matrix = copy_matrix(matrix_now)
 
